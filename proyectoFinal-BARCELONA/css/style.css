@@ -1,0 +1,61 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    margin:1rem;
+    padding:1rem;
+}
+
+h1{
+    background-color: ;
+    color:#10403B;
+    width: 100vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+
+}
+
+h3{
+    border-bottom:1px solid black;
+    padding:1%;
+}
+
+button{
+    background-color: #127369;
+    width:12rem;
+    height: 3rem;
+    color:white;
+    font-weight: bold;
+    margin-left: 2rem;
+    border-radius: 1rem;
+    border:0;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+button:hover, button.active{
+    color: #4C5958;
+    background-color: white;
+    border:1px solid #8FC1B5;
+}
+
+table{
+    margin: auto;
+    width:auto;
+}
+
+tr:nth-child(even){
+    background-color: #0CABA8;
+    color:white;
+    line-height: 2rem;
+}
+
+th{
+   
+}
+
+td{
+  
+}
