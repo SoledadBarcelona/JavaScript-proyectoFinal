@@ -165,6 +165,11 @@ function agregarUsuario()
     usuarios.push(usuario);
     console.log("ALMACENADO");
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+    Swal.fire(  {
+            title:'Nuevo Alumno Agregado',
+            icon: 'success',
+            confirmButtonText: 'OK',
 }
 
 
@@ -188,8 +193,15 @@ function eliminarUsuario(){
 
   if(!encontrado)
   {
-      alert("Alumno no Encontrado");
+      Swal.fire(  {
+            title:'Alumno no encontrado',
+            icon: 'success',
+            confirmButtonText: 'OK',
+           
+        }
+       )
   }
+  
   else{
 
        let index = usuarios.indexOf(encontrado);
@@ -198,6 +210,14 @@ function eliminarUsuario(){
 
        console.log("Borrar usuario");
        console.log(usuarios);
+
+       Swal.fire(  {
+            title:'Datos de Alumno Eliminados',
+            icon: 'success',
+            confirmButtonText: 'OK',
+           
+        }
+       )
 
   }   }
 
@@ -210,8 +230,8 @@ function modificarUsuario()
 
    if(existe)
    {
-       let encontrado = usuarios.find((usuario)=>usuario.id===id);
-       let nuevoCurso=prompt("Ingrese un curso");
+    let encontrado = usuarios.find((usuario)=>usuario.id===id);
+    let nuevoCurso=prompt("Ingrese un curso");
     let nuevoNombre = prompt("Ingrese un nombre");
     let nuevoDni = prompt("Ingrese un dni");
     let nuevoNac = prompt("Ingrese un fecha de nacimiento");
@@ -229,11 +249,24 @@ function modificarUsuario()
            usuarios.push(usuario);
     console.log("ALMACENADO");
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+    Swal.fire(  {
+            title:'Datos de Alumno Modificados',
+            icon: 'success',
+            confirmButtonText: 'OK',
+           
+        }
       
       
    }
    else
    {
-       alert("Usuario no encontrado")
+        Swal.fire(  {
+                    title:'Alumno no encontrado',
+                    icon: 'success',
+                    confirmButtonText: 'OK',
+                   
+                }
+               )
    }
 }
